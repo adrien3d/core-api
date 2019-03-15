@@ -34,8 +34,6 @@ export class UserController {
     },
   })
   async create(@requestBody() user: User): Promise<User> {
-    user.lastAccess = Math.floor(Date.now() / 1000);
-    user.active = false;
     return await this.userRepository.create(user);
   }
 

@@ -10,6 +10,7 @@ export class User extends Entity {
 
   @property({
     type: 'string',
+    unique: true,
     required: true,
   })
   email: string;
